@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_condition_clear">Clear</string>
+    <string name="home_condition_cloudy">Cloudy</string>
+    <string name="home_condition_drizzle">Drizzle</string>
+    <string name="home_condition_fog">Fog</string>
+    <string name="home_condition_partly_cloudy">Partly cloudy</string>
+    <string name="home_condition_rain">Rain</string>
+    <string name="home_condition_snow">Snow</string>
+    <string name="home_condition_thunderstorm">Thunderstorm</string>
+    <string name="home_condition_unknown">Unknown</string>
+    <string name="home_error_hint">Check your connection and try again.</string>
+    <string name="home_error_title">Couldn\'t load the weather</string>
+    <string name="home_favorite_add">Add to favorites</string>
+    <string name="home_favorite_remove">Remove from favorites</string>
+    <string name="home_feels_like">Feels like %1$d°</string>
+    <string name="home_forecast_title">5-day forecast</string>
+    <string name="home_humidity">Humidity %1$d%%</string>
+    <string name="home_refresh">Refresh</string>
+    <string name="home_refresh_failed">Couldn\'t update the weather</string>
+    <string name="home_retry">Try again</string>
+    <string name="home_temperature">%1$d°</string>
+    <string name="home_temperature_range">%1$d° / %2$d°</string>
+    <string name="home_today">Today</string>
+    <string name="home_updated_at">Updated %1$s</string>
+    <string name="home_wind">Wind %1$d km/h</string>
+</resources>

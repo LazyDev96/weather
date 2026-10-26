@@ -1,0 +1,6 @@
+R_DEF: Internal format may change without notice
+local
+string main_tab_explore
+string main_tab_favorites
+string main_tab_home
+string main_tab_settings

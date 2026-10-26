@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="favorites_title">Favorites</string>
+    <string name="favorites_remove">Remove from favorites</string>
+    <string name="favorites_empty">No favorite cities yet. Tap the heart on the Home tab to add the selected city.</string>
+</resources>

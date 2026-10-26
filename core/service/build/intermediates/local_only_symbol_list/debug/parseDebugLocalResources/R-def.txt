@@ -1,0 +1,19 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_stat_weather
+string weather_channel_description
+string weather_channel_name
+string weather_condition_clear
+string weather_condition_cloudy
+string weather_condition_drizzle
+string weather_condition_fog
+string weather_condition_partly_cloudy
+string weather_condition_rain
+string weather_condition_snow
+string weather_condition_thunderstorm
+string weather_condition_unknown
+string weather_details
+string weather_loading
+string weather_stop
+string weather_summary
+string weather_unavailable

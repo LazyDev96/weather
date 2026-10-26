@@ -1,0 +1,4 @@
+com.example.weather.feature.favorites
+string favorites_empty
+string favorites_remove
+string favorites_title

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_channel_description">Текущая погода выбранного города</string>
+    <string name="weather_channel_name">Погода</string>
+    <string name="weather_condition_clear">Ясно</string>
+    <string name="weather_condition_cloudy">Облачно</string>
+    <string name="weather_condition_drizzle">Морось</string>
+    <string name="weather_condition_fog">Туман</string>
+    <string name="weather_condition_partly_cloudy">Переменная облачность</string>
+    <string name="weather_condition_rain">Дождь</string>
+    <string name="weather_condition_snow">Снег</string>
+    <string name="weather_condition_thunderstorm">Гроза</string>
+    <string name="weather_condition_unknown">Неизвестно</string>
+    <string name="weather_details">Сегодня %1$d° / %2$d° · Ощущается как %3$d° · Влажность %4$d%% · Ветер %5$d км/ч</string>
+    <string name="weather_loading">Загрузка погоды…</string>
+    <string name="weather_stop">Отключить</string>
+    <string name="weather_summary">%1$d° · %2$s</string>
+    <string name="weather_unavailable">Погода пока недоступна</string>
+</resources>

@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/vladimir/Documents/GitHub/weather/feature/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4233760364711919360.xml:2:13-83
+INJECTED from /Users/vladimir/Documents/GitHub/weather/feature/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4233760364711919360.xml:2:13-83
+	package
+		INJECTED from /Users/vladimir/Documents/GitHub/weather/feature/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4233760364711919360.xml
+	xmlns:android
+		ADDED from /Users/vladimir/Documents/GitHub/weather/feature/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4233760364711919360.xml:2:23-81
+uses-sdk
+INJECTED from /Users/vladimir/Documents/GitHub/weather/feature/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4233760364711919360.xml reason: use-sdk injection requested
+INJECTED from /Users/vladimir/Documents/GitHub/weather/feature/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4233760364711919360.xml
+INJECTED from /Users/vladimir/Documents/GitHub/weather/feature/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4233760364711919360.xml
+	android:targetSdkVersion
+		INJECTED from /Users/vladimir/Documents/GitHub/weather/feature/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4233760364711919360.xml
+	android:minSdkVersion
+		INJECTED from /Users/vladimir/Documents/GitHub/weather/feature/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest4233760364711919360.xml

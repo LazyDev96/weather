@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="explore_search_label">Поиск города</string>
+    <string name="explore_idle_title">Найдите город</string>
+    <string name="explore_idle_hint">Введите минимум 3 буквы названия российского города. Выбранный город используется для погоды на главной.</string>
+    <string name="explore_empty_title">Города не найдены</string>
+    <string name="explore_empty_hint">Проверьте написание или попробуйте другое название.</string>
+    <string name="explore_error_title">Ошибка поиска</string>
+    <string name="explore_error_hint">Проверьте подключение и попробуйте снова.</string>
+    <string name="explore_retry">Повторить</string>
+    <string name="explore_selected">Выбран</string>
+</resources>

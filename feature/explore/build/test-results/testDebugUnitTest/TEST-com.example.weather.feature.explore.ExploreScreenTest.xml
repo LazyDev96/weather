@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.weather.feature.explore.ExploreScreenTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-25T23:47:22" hostname="192.168.0.13" time="29.05">
+  <properties/>
+  <testcase name="idle state invites to search" classname="com.example.weather.feature.explore.ExploreScreenTest" time="28.426"/>
+  <testcase name="loading shows a progress bar and no messages" classname="com.example.weather.feature.explore.ExploreScreenTest" time="0.069"/>
+  <testcase name="error offers a retry" classname="com.example.weather.feature.explore.ExploreScreenTest" time="0.118"/>
+  <testcase name="shows found cities with regions" classname="com.example.weather.feature.explore.ExploreScreenTest" time="0.107"/>
+  <testcase name="clicking a result reports it" classname="com.example.weather.feature.explore.ExploreScreenTest" time="0.056"/>
+  <testcase name="typing reports the new query" classname="com.example.weather.feature.explore.ExploreScreenTest" time="0.186"/>
+  <testcase name="marks only the selected city" classname="com.example.weather.feature.explore.ExploreScreenTest" time="0.046"/>
+  <testcase name="empty result explains that nothing was found" classname="com.example.weather.feature.explore.ExploreScreenTest" time="0.041"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

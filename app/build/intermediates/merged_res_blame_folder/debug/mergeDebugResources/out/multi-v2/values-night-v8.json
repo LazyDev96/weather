@@ -1,0 +1,53 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.weather.app-mergeDebugResources-67:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "/Users/vladimir/.gradle/caches/8.10.2/transforms/66e411c17d8779649b7a52c36d4522c5/transformed/appcompat-1.7.0/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "193,263,347,431,527,629,731,825",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "258,342,426,522,624,726,820,909"
+                    }
+                },
+                {
+                    "source": "/Users/vladimir/.gradle/caches/8.10.2/transforms/386186eaf99df57909cd7a67426122db/transformed/core-splashscreen-1.0.1/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "85",
+                        "endOffsets": "136"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "107",
+                        "endColumns": "85",
+                        "endOffsets": "188"
+                    }
+                },
+                {
+                    "source": "/Users/vladimir/Documents/GitHub/weather/feature/splash/build/intermediates/packaged_res/debug/packageDebugResources/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "51",
+                        "endOffsets": "102"
+                    }
+                }
+            ]
+        }
+    ]
+}

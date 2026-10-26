@@ -1,0 +1,10 @@
+com.example.weather.feature.explore
+string explore_empty_hint
+string explore_empty_title
+string explore_error_hint
+string explore_error_title
+string explore_idle_hint
+string explore_idle_title
+string explore_retry
+string explore_search_label
+string explore_selected

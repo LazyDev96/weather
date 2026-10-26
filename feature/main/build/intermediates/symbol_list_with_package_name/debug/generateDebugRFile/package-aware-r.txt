@@ -1,0 +1,5 @@
+com.example.weather.feature.main
+string main_tab_explore
+string main_tab_favorites
+string main_tab_home
+string main_tab_settings

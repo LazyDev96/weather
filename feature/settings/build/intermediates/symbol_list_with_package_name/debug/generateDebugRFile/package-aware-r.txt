@@ -1,0 +1,12 @@
+com.example.weather.feature.settings
+string settings_back
+string settings_language
+string settings_language_english
+string settings_language_russian
+string settings_theme
+string settings_theme_dark
+string settings_theme_light
+string settings_theme_system
+string settings_title
+string settings_weather_notification
+string settings_weather_notification_hint

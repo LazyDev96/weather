@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.example.weather.app-debug-69:/xml_locales_config.xml.flat",
+        "source": "com.example.weather.app-main-71:/xml/locales_config.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-69:/drawable_ic_launcher_monochrome.xml.flat",
+        "source": "com.example.weather.app-main-71:/drawable/ic_launcher_monochrome.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-69:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.weather.app-main-71:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-69:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.weather.app-main-71:/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]
