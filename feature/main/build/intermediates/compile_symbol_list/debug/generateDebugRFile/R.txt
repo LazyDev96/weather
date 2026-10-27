@@ -1,4 +1,0 @@
-int string main_tab_explore 0x0
-int string main_tab_favorites 0x0
-int string main_tab_home 0x0
-int string main_tab_settings 0x0

@@ -1,45 +1,31 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.hilt)
-}
-
-android {
-    namespace = "com.example.weather.core.database"
-    compileSdk = libs.versions.compileSdk.get().toInt()
-
-    defaultConfig {
-        minSdk = libs.versions.minSdk.get().toInt()
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
+    id("weather.kmp.room")
 }
 
 kotlin {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
+    sourceSets {
+        commonMain.dependencies {
+            // api: Room-типы (RoomDatabase) торчат из Koin-модуля и сигнатур DAO
+            api(libs.room.runtime)
+            implementation(libs.sqlite.bundled)
+            implementation(libs.koin.core)
+            api(libs.kotlinx.coroutines.core)
+        }
+        androidMain.dependencies {
+            implementation(libs.koin.android)
+        }
     }
 }
 
-// Схемы Room складываются в core/database/schemas — их стоит коммитить для миграций.
+// Схемы базы экспортируются для проверки миграций
 ksp {
-    arg("room.schemaDirectory", "$projectDir/schemas")
+    arg("room.schemaLocation", "$projectDir/schemas")
 }
 
+// Room генерирует код отдельно для каждой цели
 dependencies {
-    // api: Hilt-компоненты в :app ссылаются на AppDatabase, а ему нужен RoomDatabase на classpath
-    api(libs.room.runtime)
-    implementation(libs.room.ktx)
-    ksp(libs.room.compiler)
-
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
-
-    implementation(libs.kotlinx.coroutines.android)
+    add("kspAndroid", libs.room.compiler)
+    add("kspIosX64", libs.room.compiler)
+    add("kspIosArm64", libs.room.compiler)
+    add("kspIosSimulatorArm64", libs.room.compiler)
 }

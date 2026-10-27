@@ -1,18 +1,14 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.hilt)
+    id("weather.android.library")
 }
 
+// Служба уведомления существует только на Android, поэтому модуль не мультиплатформенный
 android {
     namespace = "com.example.weather.core.service"
-    compileSdk = libs.versions.compileSdk.get().toInt()
+    compileSdk = providers.gradleProperty("weather.compileSdk").get().toInt()
 
     defaultConfig {
-        minSdk = libs.versions.minSdk.get().toInt()
+        minSdk = providers.gradleProperty("weather.minSdk").get().toInt()
     }
 
     compileOptions {
@@ -23,7 +19,8 @@ android {
 
 kotlin {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        optIn.add("kotlin.time.ExperimentalTime")
     }
 }
 
@@ -32,7 +29,6 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.kotlinx.coroutines.android)
-
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
+    implementation(libs.koin.android)
+    implementation(libs.kotlinx.datetime)
 }

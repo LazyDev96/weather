@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="main_tab_explore">Поиск</string>
-    <string name="main_tab_favorites">Избранное</string>
-    <string name="main_tab_home">Главная</string>
-    <string name="main_tab_settings">Настройки</string>
-</resources>

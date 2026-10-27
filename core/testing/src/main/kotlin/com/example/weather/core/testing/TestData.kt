@@ -5,7 +5,9 @@ import com.example.weather.core.data.model.DailyWeather
 import com.example.weather.core.data.model.Weather
 import com.example.weather.core.data.model.WeatherCondition
 import com.example.weather.core.data.model.WeatherLocation
-import java.time.LocalDate
+import kotlinx.datetime.DateTimeUnit
+import kotlinx.datetime.LocalDate
+import kotlinx.datetime.plus
 
 object TestData {
 
@@ -38,7 +40,7 @@ object TestData {
         ),
         daily = List(5) { index ->
             DailyWeather(
-                date = LocalDate.of(2026, 10, 26).plusDays(index.toLong()),
+                date = LocalDate(2026, 10, 26).plus(index, DateTimeUnit.DAY),
                 condition = WeatherCondition.CLOUDY,
                 temperatureMax = temperature + 2,
                 temperatureMin = temperature - 4,

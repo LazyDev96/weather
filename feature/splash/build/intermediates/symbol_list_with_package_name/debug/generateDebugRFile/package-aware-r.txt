@@ -1,4 +1,1 @@
 com.example.weather.feature.splash
-color splash_background
-drawable splash_logo
-string splash_image_description

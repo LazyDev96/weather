@@ -1,16 +1,13 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    id("weather.android.library")
 }
 
 android {
     namespace = "com.example.weather.core.testing"
-    compileSdk = libs.versions.compileSdk.get().toInt()
+    compileSdk = providers.gradleProperty("weather.compileSdk").get().toInt()
 
     defaultConfig {
-        minSdk = libs.versions.minSdk.get().toInt()
+        minSdk = providers.gradleProperty("weather.minSdk").get().toInt()
     }
 
     compileOptions {
@@ -21,16 +18,16 @@ android {
 
 kotlin {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
     }
 }
 
-// Общие зависимости и хелперы для unit-тестов: подключается как testImplementation(projects.core.testing)
+// Общие зависимости и хелперы для unit-тестов, которые лежат в androidUnitTest:
+// testImplementation-аналог — implementation(projects.core.testing)
 dependencies {
     api(projects.core.data)
 
     // Compose UI тесты запускаются на JVM через Robolectric, эмулятор не нужен
-    api(platform(libs.androidx.compose.bom))
     api(libs.androidx.compose.ui.test.junit4)
     api(libs.robolectric)
     api(libs.androidx.test.ext.junit)
@@ -40,4 +37,5 @@ dependencies {
     api(libs.kotlinx.coroutines.test)
     api(libs.mockk)
     api(libs.turbine)
+    api(libs.kotlinx.datetime)
 }

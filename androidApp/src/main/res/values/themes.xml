@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Тема после splash. Окно закрашено тем же цветом, что и экран заставки. -->
+    <style name="Theme.Weather" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/splash_background</item>
+    </style>
+
+    <!-- Тема запуска: только цвет фона, иконка прозрачная.
+         Картинку-заглушку показывает Compose-экран :feature:splash. -->
+    <style name="Theme.Weather.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+        <item name="postSplashScreenTheme">@style/Theme.Weather</item>
+    </style>
+
+</resources>

@@ -1,5 +1,2 @@
 R_DEF: Internal format may change without notice
 local
-color splash_background
-drawable splash_logo
-string splash_image_description

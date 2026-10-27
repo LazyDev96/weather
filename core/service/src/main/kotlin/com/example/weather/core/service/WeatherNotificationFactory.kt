@@ -10,8 +10,10 @@ import androidx.annotation.StringRes
 import androidx.core.app.NotificationCompat
 import com.example.weather.core.data.model.Weather
 import com.example.weather.core.data.model.WeatherCondition
-import java.time.LocalDate
 import kotlin.math.roundToInt
+import kotlin.time.Clock
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.todayIn
 
 internal const val CHANNEL_ID = "weather"
 
@@ -39,7 +41,7 @@ internal class WeatherNotificationFactory(private val context: Context) {
 
     fun forWeather(weather: Weather): Notification {
         // «Текущий день»: запись на сегодня, а если кэш устарел и её нет — ближайшая
-        val today = weather.daily.firstOrNull { it.date == LocalDate.now() } ?: weather.daily.firstOrNull()
+        val today = weather.daily.firstOrNull { it.date == Clock.System.todayIn(TimeZone.currentSystemDefault()) } ?: weather.daily.firstOrNull()
         val current = weather.current
 
         val summary = context.getString(

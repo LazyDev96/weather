@@ -14,9 +14,7 @@ import com.example.weather.core.data.SettingsRepository
 import com.example.weather.core.data.WeatherRepository
 import com.example.weather.core.data.model.Weather
 import com.example.weather.core.data.model.WeatherLocation
-import dagger.hilt.android.AndroidEntryPoint
 import java.util.Locale
-import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -29,6 +27,8 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
 private const val NOTIFICATION_ID = 1001
 private const val REFRESH_INTERVAL_MS = 30 * 60 * 1000L
@@ -39,12 +39,12 @@ private const val REFRESH_INTERVAL_MS = 30 * 60 * 1000L
  * Данные берутся из Room (там же их читает вкладка Home), сеть дёргается раз в 30 минут
  * и при смене города. Язык уведомления следует языку из настроек приложения.
  */
-@AndroidEntryPoint
-class WeatherForegroundService : Service() {
+class WeatherForegroundService : Service(), KoinComponent {
 
-    @Inject lateinit var weatherRepository: WeatherRepository
-    @Inject lateinit var locationRepository: LocationRepository
-    @Inject lateinit var settingsRepository: SettingsRepository
+    // Koin уже запущен в Application.onCreate, до создания любого сервиса
+    private val weatherRepository: WeatherRepository by inject()
+    private val locationRepository: LocationRepository by inject()
+    private val settingsRepository: SettingsRepository by inject()
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
     private var observeJob: Job? = null

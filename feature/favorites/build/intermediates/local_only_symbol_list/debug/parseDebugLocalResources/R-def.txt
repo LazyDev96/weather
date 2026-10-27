@@ -1,5 +1,0 @@
-R_DEF: Internal format may change without notice
-local
-string favorites_empty
-string favorites_remove
-string favorites_title

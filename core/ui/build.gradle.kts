@@ -1,42 +1,31 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    id("weather.kmp.compose")
 }
 
-android {
-    namespace = "com.example.weather.core.ui"
-    compileSdk = libs.versions.compileSdk.get().toInt()
-
-    defaultConfig {
-        minSdk = libs.versions.minSdk.get().toInt()
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-}
-
-kotlin {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
-    }
-}
-
-// Все Compose-зависимости отдаём через api, чтобы feature-модулям
+// Все Compose-, Koin- и lifecycle-зависимости отдаём через api, чтобы feature-модулям
 // не нужно было повторять их в каждом build.gradle.kts.
+kotlin {
+    sourceSets {
+        commonMain.dependencies {
+            api(projects.core.common)
+
+            api(compose.runtime)
+            api(compose.foundation)
+            api(compose.material3)
+            api(compose.ui)
+            api(compose.components.resources)
+            api(compose.components.uiToolingPreview)
+            api(libs.compose.material.icons.core)
+            api(libs.jetbrains.lifecycle.runtime.compose)
+
+            api(libs.koin.core)
+            api(libs.koin.core.viewmodel)
+            api(libs.koin.compose)
+            api(libs.koin.compose.viewmodel)
+        }
+    }
+}
+
 dependencies {
-    api(projects.core.common)
-
-    api(platform(libs.androidx.compose.bom))
-    api(libs.androidx.compose.ui)
-    api(libs.androidx.compose.material3)
-    api(libs.androidx.compose.material.icons.core)
-    api(libs.androidx.compose.ui.tooling.preview)
-    api(libs.androidx.lifecycle.runtime.compose)
-
-    debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(compose.uiTooling)
 }

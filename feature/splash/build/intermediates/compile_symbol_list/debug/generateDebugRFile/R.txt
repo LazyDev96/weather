@@ -1,3 +1,0 @@
-int color splash_background 0x0
-int drawable splash_logo 0x0
-int string splash_image_description 0x0

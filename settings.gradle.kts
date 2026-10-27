@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -15,7 +16,13 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
         mavenCentral()
     }
 }
@@ -25,7 +32,8 @@ rootProject.name = "Weather"
 // Позволяет писать implementation(projects.core.ui) вместо project(":core:ui")
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-include(":app")
+include(":androidApp")
+include(":shared")
 
 include(":core:common")
 include(":core:ui")

@@ -1,41 +1,15 @@
-
-# Gradle
-.gradle/
-build/
-**/build/
-
-# Local configuration
-local.properties
-
-# Android Studio
-.idea/
 *.iml
-*.ipr
-*.iws
-
-# Android build outputs
-captures/
-.externalNativeBuild/
-.cxx/
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+build/
+/captures
+.externalNativeBuild
+.cxx
 *.apk
 *.aab
 
-# Kotlin
-.kotlin/
-
-# Signing keys and secrets
-*.jks
-*.keystore
-secrets.properties
-.env
-
-# Logs
-*.log
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Temporary files
-*.tmp
-*.swp
+# iOS (проект генерируется XcodeGen)
+*.xcodeproj/
+xcuserdata/

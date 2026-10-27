@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="favorites_empty">Избранных городов пока нет. Нажмите на сердечко на вкладке «Главная», чтобы добавить выбранный город.</string>
-    <string name="favorites_remove">Убрать из избранного</string>
-    <string name="favorites_title">Избранное</string>
-</resources>
